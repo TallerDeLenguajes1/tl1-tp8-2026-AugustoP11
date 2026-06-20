@@ -16,4 +16,11 @@ public class Tarea
         this.descripcion = descripcion;
         this.duracion = duracion;
     }
+
+    public void MostrarTarea()
+    {
+        Console.WriteLine($"ID: {tareaID}");
+        Console.WriteLine($"DESCRIPCION: {descripcion}");
+        Console.WriteLine($"DURACION: {duracion}");
+    }
 }
