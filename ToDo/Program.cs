@@ -46,6 +46,8 @@ do
 
     Console.WriteLine("Ingrese '2' para buscar tarea pendiente por descripción");
 
+    Console.WriteLine("Ingrese '3' para mostrar todas las tareas");
+
     Console.WriteLine("Ingrese '0' para salir");
 
     opcion = int.Parse(Console.ReadLine());
@@ -84,6 +86,21 @@ do
                     Console.WriteLine("\n----------TAREA ENCONTRADA----------");
                     tarea.MostrarTarea();
                 }
+            }
+        break;
+
+        case 3:
+            Console.WriteLine("\n-------TODAS LAS TAREAS-------");
+            foreach (var tarea in tareasPendientes)
+            {
+                tarea.MostrarTarea();
+                Console.WriteLine("----------------------------");
+            }
+
+            foreach (var tarea in tareasRealizadas)
+            {
+                tarea.MostrarTarea();
+                Console.WriteLine("----------------------------");
             }
         break;
 
