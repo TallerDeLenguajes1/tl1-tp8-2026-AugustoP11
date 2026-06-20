@@ -43,6 +43,9 @@ int opcion, id;
 do
 {
     Console.WriteLine("Ingrese '1' para marcar una tarea como realizada mediante ID");
+
+    Console.WriteLine("Ingrese '2' para buscar tarea pendiente por descripción");
+
     Console.WriteLine("Ingrese '0' para salir");
 
     opcion = int.Parse(Console.ReadLine());
@@ -66,6 +69,20 @@ do
                     tareasRealizadas.Add(tarea);
                     tareasPendientes.Remove(tarea);
                     break;
+                }
+            }
+        break;
+
+        case 2:
+            Console.WriteLine("\nIngrese una descripcion para buscar:");
+            string descripcionABuscar = Console.ReadLine();
+
+            foreach (var tarea in tareasPendientes)
+            {
+                if (tarea.Descripcion.Contains(descripcionABuscar))
+                {
+                    Console.WriteLine("\n----------TAREA ENCONTRADA----------");
+                    tarea.MostrarTarea();
                 }
             }
         break;
