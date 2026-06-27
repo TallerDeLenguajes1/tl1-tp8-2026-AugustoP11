@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="CalculadoraHistorial/CalculadoraHistorial.csproj" />
+  <Project Path="ToDo/ToDo.csproj" />
+</Solution>
